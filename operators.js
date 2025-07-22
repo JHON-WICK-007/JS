@@ -50,3 +50,19 @@ console.log(Number(u));
 let bool = 1;
 console.log(Boolean(bool));
 // 1 => true, 0 => false, null => false, undefined => false
+
+console.log("1" + 2);       
+// Output: "12"
+// Explanation: "1" is a string, so 2 is converted to a string and concatenated → "1" + "2" = "12"
+
+console.log(1 + "2");       
+// Output: "12"
+// Explanation: 1 is a number, "2" is a string → number is coerced into string → "1" + "2" = "12"
+
+console.log("1" + 2 + 2);   
+// Output: "122"
+// Explanation: "1" + 2 = "12" (string), then "12" + 2 = "122"
+
+console.log(1 + 2 + "2");   
+// Output: "32"
+// Explanation: 1 + 2 = 3 (number), then 3 + "2" = "32" (3 is converted to string and concatenated)
