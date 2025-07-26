@@ -8,6 +8,7 @@ console.log(mark.toString()); // Convert array to a comma-separated string and p
 // Define another array 'mark1'
 let mark1 = [2, 4, 6, 8, 10];
 console.log(mark.concat(mark1)); // Concatenate 'mark' and 'mark1' and print the new combined array
+console.log(mark1.includes(10)); // return true or false, if 10 is present in 'mark1'
 
 // Create an array of student IDs
 let id = [101, 102, 103, 104, 105];
@@ -27,7 +28,10 @@ console.log(dc); // Output: ["superman"]
 let age = [1, 2, 3, 4, 5];
 console.log(age.slice(0, 4)); // Slice elements from index 0 to 3 (not including 4): [1, 2, 3, 4]
 
-console.log(age.splice(2, 3, 101, 102)); 
+console.log(age.splice(2, 3, 101, 102));
 // Start at index 2, remove 3 elements (3, 4, 5), and insert 101, 102 at that place
 // Returns the removed elements: [3, 4, 5]
 // Modifies the original array to: [1, 2, 101, 102]
+
+console.log(Array.isArray("MANAN")); // Check if "MANAN" is an array or not
+console.log(Array.from("MANAN")); // Convert the string "MANAN" into an array of characters
