@@ -14,14 +14,14 @@ console.log(document.querySelector("div").innerText); // "hello\nthis is the chi
 console.log(document.querySelector("div").innerText = "This is the changed value"); // "This is the changed value"
 
 console.log(document.querySelector("div.x").innerHTML); // "<h1>hello</h1><p>this is the innertext</p>"
-console.log(document.querySelector("div.x").innerHTML = "<h1>heelo</h1>"); // "<h1>heelo</h1>"
+document.querySelector("div.x").innerHTML = "<h1>heelo</h1>"; // "<h1>heelo</h1>"   // Replace everything inside the div with a new <h1>
 
-console.log(document.querySelector("h1#fame").textContent); // "Lords" (even though it's hidden)
+console.log(document.querySelector("h1#fame").textContent); // "hidden" (even though it's hidden)
 
 console.log(document.querySelector("div.y").getAttribute("id"));    // "why"
 console.log(document.querySelector("div.y").getAttribute("name"));  // "manan"
 
-document.querySelector("div.z").setAttribute("class", "superman");  // Now div.z becomes <div class="superman"></div>
+document.querySelector("div").setAttribute("class", "superman");  // Now div.z becomes <div class="superman"></div>
 
 document.querySelector("div").style.backgroundColor = "red";        // The first <div> (which was changed to "This is the changed value") now has red background
 

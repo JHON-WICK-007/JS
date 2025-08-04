@@ -31,6 +31,8 @@ btn3.onmouseover = (e) => {
 
 let btn4 = document.querySelector("#btn4");
 // Multiple click listeners, except hand3 (removed)
+// You can add multiple event listeners to the same element and same event.
+// All listeners will run in the order they were added.
 btn4.addEventListener("click", () => {
     console.log("button 4 at a 1");
 });

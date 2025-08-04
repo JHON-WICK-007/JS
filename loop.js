@@ -5,8 +5,6 @@ for(let i of str) {
     console.log(i);  // Outputs: M A N A N (each letter on a new line)
 }
 
-
-
 const obj = {
     name: "MANAN",
     age: 20,
@@ -21,8 +19,6 @@ for(let key in obj) {
     console.log(key, obj[key]); 
     // This accesses the value dynamically using the key
 }
-
-
 
 let x = {
     name : "pen",

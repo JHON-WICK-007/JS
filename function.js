@@ -5,7 +5,9 @@ const arrowsum = (a, b) => {
 console.log(arrowsum(3, 5)); // Output: 8
 
 // Arrow function with no parameters that logs "Hello"
-const hello = () => console.log("Hello");
+const hello = () => {
+    console.log("Hello");
+}
 console.log(hello()); // Logs "Hello" and then 'undefined' because console.log(hello()) prints the return value of hello(), which is undefined
 
 // forEach to iterate over each element in the array
