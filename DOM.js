@@ -6,7 +6,7 @@ console.log(document.querySelector(".hero"));           // <div class="hero">hel
 console.log(document.querySelectorAll(".hero"));        // NodeList(3) [div.hero, div.hero, div.hero]
 
 console.log(document.getElementsByTagName("p"));        // [p, p, p, p]
-console.log(document.querySelector("p"));               // <p>p1</p>
+console.log(document.querySelectorAll("p"));               // <p>p1</p>
 
 console.log(document.querySelector("div.x").children);  // [h1, p]
 
@@ -21,7 +21,7 @@ console.log(document.querySelector("h1#fame").textContent); // "hidden" (even th
 console.log(document.querySelector("div.y").getAttribute("id"));    // "why"
 console.log(document.querySelector("div.y").getAttribute("name"));  // "manan"
 
-document.querySelector("div").setAttribute("class", "superman");  // Now div.z becomes <div class="superman"></div>
+document.querySelector("div.z").setAttribute("class", "superman");  // Now div.z becomes <div class="superman"></div>
 
 document.querySelector("div").style.backgroundColor = "red";        // The first <div> (which was changed to "This is the changed value") now has red background
 
@@ -51,5 +51,5 @@ console.log(remove);      // <p id="remove">hii i am going to be remove</p>
 
 let para = document.querySelector("p.one");
 para.classList.add("two");     // class becomes: class="one two"
-console.log(para);             // <p class="one two">hii i am the classlist</p>
-para.classList.remove("two");  // class becomes: class="one"
+console.log(para);            // <p class="one two">hii i am the classlist</p>
+para.classList.remove("two" );  // class becomes: class="one"

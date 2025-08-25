@@ -8,7 +8,7 @@ console.log(arrowsum(3, 5)); // Output: 8
 const hello = () => {
     console.log("Hello");
 }
-console.log(hello()); // Logs "Hello" and then 'undefined' because console.log(hello()) prints the return value of hello(), which is undefined
+hello(); // Logs "Hello" and then 'undefined' because console.log(hello()) prints the return value of hello(), which is undefined
 
 // forEach to iterate over each element in the array
 let arr = [1, 2, 3, 4, 5];

@@ -1,5 +1,6 @@
 // Define an array named 'mark'
 let mark = [20, 40, 60, 80, 100];
+console.log(mark.toString()); // Convert array to a comma-separated string and print
 console.log(mark); // Output the entire array
 console.log(mark.length); // Output the number of elements in the array (5)
 console.log(typeof mark); // Output the type of 'mark' (which is 'object', since arrays are objects in JS)

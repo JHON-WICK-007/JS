@@ -20,4 +20,4 @@ const product = {
 console.log(product); // Output: { name: "raj", surname: "vasani" }
 
 // typeof an object is 'object'
-console.log(typeof product); // Output: object
+console.log(typeof product); // Output: object  
