@@ -9,6 +9,7 @@ console.log(mark.toString()); // Convert array to a comma-separated string and p
 // Define another array 'mark1'
 let mark1 = [2, 4, 6, 8, 10];
 console.log(mark.concat(mark1)); // Concatenate 'mark' and 'mark1' and print the new combined array
+console.log(mark.join("-"));     // Join elements of 'mark' into a string separated by '-'
 console.log(mark1.includes(10)); // return true or false, if 10 is present in 'mark1'
 
 // Create an array of student IDs
@@ -17,6 +18,7 @@ id.push(106); // Add 106 to the end of the array
 console.log(id); // Output updated array
 id.pop(); // Remove the last element from the array (106)
 console.log(id); // Output updated array after removal
+console.log(id.indexOf(104)); // Find the index of element 104 in the array (return 3)
 
 // Create a DC heroes array
 let dc = ["superman"];
@@ -24,6 +26,7 @@ dc.unshift("batman"); // Add 'batman' at the beginning of the array
 console.log(dc); // Output: ["batman", "superman"]
 dc.shift(); // Remove the first element (batman) from the array
 console.log(dc); // Output: ["superman"]
+console.log(dc.includes("superman"));  // Check if 'superman' is in the array (returns true)
 
 // Create an age array
 let age = [1, 2, 3, 4, 5];
