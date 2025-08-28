@@ -33,9 +33,9 @@ class parent {
 class child extends parent {
     constructor(name, age, school) {
         super(name, age);                  // calling parent constructor(parameters)
-        this.school = school;   
+        this.school = school;
         console.log("Creating a child instance");
-    }   
+    }
 
     display() {
         super.display();

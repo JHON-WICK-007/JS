@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+
+        // Original object with nested object 'address'
+        let person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            address: {
+                street: 'North 1st street',
+                city: 'San Jose',
+                state: 'CA',
+                country: 'USA'
+            }
+        };
+
+        // Deep copy using JSON.parse(JSON.stringify())
+        // This creates a completely new copy of the object
+        // including nested objects (so they are NOT shared by same reference)
+        let copiedPerson = JSON.parse(JSON.stringify(person));
+
+        // Printing values before making changes
+        console.log(copiedPerson.firstName + " " + copiedPerson.address.street + " " + copiedPerson.address.city);
+        console.log(person.firstName + " " + person.address.street + " " + person.address.city);
+
+        // Changing primitive property → only affects copiedPerson
+        copiedPerson.firstName = 'Anne';
+
+        // Changing nested object properties → only affects copiedPerson
+        // because JSON method created a true deep copy
+        copiedPerson.address.street = 'Amphitheatre Parkway';
+        copiedPerson.address.city = 'Mountain View';
+
+        // Printing values after making changes
+        console.log(copiedPerson.firstName + " " + copiedPerson.address.street + " " + copiedPerson.address.city);
+        console.log(person.firstName + " " + person.address.street + " " + person.address.city);
+
+        /*
+          Output:
+          Before changes:
+          John North 1st street San Jose
+          John North 1st street San Jose
+
+          After changes:
+          Anne Amphitheatre Parkway Mountain View
+          John North 1st street San Jose
+
+          Explanation:
+          - firstName is copied by value (independent).
+          - address is also copied independently because of deep copy.
+          - Changes in copiedPerson DO NOT affect person.
+        */
+
+    </script>
+</body>
+
+</html>

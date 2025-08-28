@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        let user = {
+            name: "Alice",
+            age: 25,
+
+            // Called when object is converted to string
+            toString() {
+                return this.name;
+            },
+
+            // Called when object is converted to number
+            valueOf() {
+                return this.age;
+            }
+        };
+
+        // Numeric context → uses valueOf()
+        console.log(user + 5);   // 30  (25 + 5)
+
+        // String context → uses toString()
+        console.log(String(user));  // "Alice"
+
+        function Country(name, population) {
+            this.name = name;
+            this.population = population;
+
+            // Custom string conversion
+            this.toString = function () {
+                return `Country: ${this.name}`;
+            }
+
+            // Custom number conversion
+            this.valueOf = function () {
+                return this.population;
+            }
+        }
+
+        const USA = new Country('United States of America', 350000000);
+
+        // When used as a string → toString() is called
+        console.log(USA.toString());       // Country: United States of America
+
+        // When used as a number → valueOf() is called
+        console.log(USA.valueOf() + 500);  // 350000500
+
+        /*
+         In JavaScript:
+         - Objects are automatically converted to primitives when needed.
+         - String context → toString() is used
+         - Number context → valueOf() is used
+        */
+    </script>
+
+</body>
+
+</html>
