@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+
+        // Original object with nested object 'address'
+        let person = {
+            firstName: 'John',
+            lastName: 'Doe',
+            address: {
+                street: 'North 1st street',
+                city: 'San Jose',
+                state: 'CA',
+                country: 'USA'
+            }
+        };
+
+        // Shallow copy using Object.assign()
+        // This creates a new object, but nested objects are still shared by reference
+        let copiedPerson = {... person};
+
+        // Shallow copy using spread operator
+        // let copiedPerson = { ...person };
+
+        // Printing values before making changes
+        console.log(copiedPerson.firstName + " " + copiedPerson.address.street + " " + copiedPerson.address.city);
+        console.log(person.firstName + " " + person.address.street + " " + person.address.city);
+
+        // Changing primitive property → only affects copiedPerson
+        copiedPerson.firstName = 'Anne';
+
+        // Changing nested object properties (shared reference) 
+        // → affects both copiedPerson and person
+        copiedPerson.address.street = 'Amphitheatre Parkway';
+        copiedPerson.address.city = 'Mountain View';
+
+        // Printing values after making changes
+        console.log(copiedPerson.firstName + " " + copiedPerson.address.street + " " + copiedPerson.address.city);
+        console.log(person.firstName + " " + person.address.street + " " + person.address.city);
+
+        /*
+          Output:
+          Before changes:
+          John North 1st street San Jose
+          John North 1st street San Jose
+
+          After changes:
+          Anne Amphitheatre Parkway Mountain View
+          John Amphitheatre Parkway Mountain View
+
+          Explanation:
+          - firstName is copied by value (independent change).
+          - address is copied by reference (shared change).
+        */
+
+    </script>
+</body>
+
+</html>

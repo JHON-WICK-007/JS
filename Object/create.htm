@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p>Create a new object from the prototype of another object.</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+        // Create an Object:
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        };
+
+        // Create new Object
+        const man = Object.create(person);
+        man.firstName = "Peter";
+        man.language = "GU";
+
+        // Display Properties
+        document.getElementById("demo").innerHTML = person.firstName + " and " + man.firstName;
+        document.getElementById("demo1").innerHTML = person.language + " and " + man.language;
+
+        // Constructor Function
+        function Person(firstName, lastName, age) {
+            this.firstName = firstName;  // property
+            this.lastName = lastName;    // property
+            this.age = age;              // property
+            this.greet = function () {   // method
+                console.log("Hello, " + this.firstName);
+            };
+        }
+
+        // Create objects from the constructor
+        const person1 = new Person("John", "Doe", 30);
+        const person2 = new Person("Anne", "Smith", 25);
+
+        // Access properties
+        console.log(person1.firstName); // John
+        console.log(person2.age);       // 25
+
+        // Call method
+        person1.greet(); // Hello, John
+        person2.greet(); // Hello, Anne
+
+        // another way to create an object
+        const t = new Object();
+        t.firstName = "John";
+        t.lastName = "Doe";
+        t.age = 50;
+
+        console.log(t); // {firstName: "John", lastName: "Doe", age: 50}
+    </script>
+</body>
+
+</html>

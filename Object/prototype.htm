@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>The prototype property allows you to add new methods to objects constructors:</p>
+    <p id="demo"></p>
+
+    <script>
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        Person.prototype.nationality = "English";
+
+        const mm = new Person("John", "Doe", 50, "blue");
+        document.getElementById("demo").innerHTML = "The nationality of my father is " + mm.nationality;
+
+        
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+
+        Person.prototype.name = function () {
+            return this.firstName + " " + this.lastName
+        };
+
+        const myFather = new Person("John", "Doe", 50, "blue");
+        document.getElementById("demo").innerHTML = "My father is " + myFather.name();
+
+
+        const student1 = {
+            name: "Manan",
+            calcfee() {
+                console.log("Fee is 10000000000");
+            }
+        }
+
+        const student2 = {
+            name: "Raj"
+        }
+
+        student2.__proto__ = student1; // student2 inherits from student1
+
+        console.log(student2);  // It prints only it's own properties of student2
+        student2.calcfee();     // if student2 also have a function having a same name as student1 then it will override the student1 function. and print only of the student2 function.
+    </script>
+</body>
+
+</html>

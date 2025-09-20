@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        // Create an object:
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            language: "EN"
+        };
+
+        // Add a property
+        Object.defineProperty(person, "year", { value: "2008" }) // This adds a new property "year" with the value "2008" to person.
+
+        // Display the property
+        document.getElementById("demo").innerHTML = person.year;
+
+        document.getElementById("demo1").innerHTML = person.language;
+
+        // Change a property
+        Object.defineProperty(person, "language", { value: "GU" })
+
+        // Display Property
+        document.getElementById("demo2").innerHTML = person.language;
+    </script>
+
+</body>
+
+</html>

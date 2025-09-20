@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let msg = "hello EveryOne";
+        console.log(msg.toUpperCase());   // Converts to uppercase → "HELLO EVERYONE"
+        console.log(msg.length);          // String length → 13
+        console.log(isNaN(msg));          // true, because msg is not a number
+
+        let num = 123.456;
+        console.log(num.toFixed(1));      // Rounds to 1 decimal place → "123.5"
+        console.log(parseInt("20 ruppes"));    // Extracts integer → 20
+        console.log(num.toString());      // Converts number to string → "123.456"
+        console.log(isNaN("hello"));      // "hello" is not a number → true
+
+        console.log(msg.indexOf("o"));    // First index of "o" → 4
+        console.log(msg.includes("ll"));  // Checks if "ll" exists → true
+
+    </script>
+</body>
+
+</html>

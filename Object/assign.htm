@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        // Create Target Object
+        const person1 = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 50,
+            eyeColor: "blue"
+        };
+        document.getElementById("demo").innerHTML = person1["firstName"] + " " + person1.lastName + " " + person1.age;
+
+        // Create Source Object
+        const person2 = { firstName: "Anne", age: 100 };
+        const person3 = { lastName: "Smith" };
+
+        // Assign Source to Target
+        Object.assign(person1, person2, person3); // new values from person2 and person3 are assigned to person1
+
+        // Display Target
+        document.getElementById("demo1").innerHTML = person1.firstName + " " + person1.lastName + " " + person1.age;
+    </script>
+
+</body>
+
+</html>

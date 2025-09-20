@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Object References</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        // Create an object
+        const person1 = { name: "John", age: 30 };
+
+        // Assign person1 to person2 (both point to the same object)
+        const person2 = person1;
+
+        // Modify person2
+        person2.age = 40;
+
+        // Since person1 and person2 refer to the same object, both show updated age
+        document.getElementById("demo").innerHTML =
+            "Person1 Age: " + person1.age + "<br>" +
+            "Person2 Age: " + person2.age;
+    </script>
+
+</body>
+
+</html>
